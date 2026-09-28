@@ -1,0 +1,1482 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>LUXE LIPS | Premium Lipstick Store</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:Arial, sans-serif;
+    background:#fff8fa;
+    color:#292126;
+}
+
+button{
+    font-family:inherit;
+    cursor:pointer;
+}
+
+/* NAVBAR */
+
+nav{
+    position:sticky;
+    top:0;
+    z-index:1000;
+
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+
+    padding:18px 7%;
+    background:white;
+
+    box-shadow:0 3px 20px rgba(0,0,0,.08);
+}
+
+.logo{
+    font-family:Georgia,serif;
+    font-size:28px;
+    font-weight:bold;
+}
+
+.logo span{
+    color:#c72c59;
+}
+
+.nav-links{
+    display:flex;
+    gap:28px;
+    list-style:none;
+}
+
+.nav-links a{
+    text-decoration:none;
+    color:#333;
+    font-size:14px;
+    font-weight:bold;
+}
+
+.nav-links a:hover{
+    color:#c72c59;
+}
+
+.cart{
+    font-size:20px;
+}
+
+.cart span{
+    background:#c72c59;
+    color:white;
+    border-radius:50%;
+    padding:4px 8px;
+    font-size:12px;
+}
+
+/* OFFER */
+
+.offer{
+    background:#2b2024;
+    color:white;
+    text-align:center;
+    padding:11px;
+    font-size:13px;
+    letter-spacing:1px;
+}
+
+/* HERO */
+
+.hero{
+    min-height:620px;
+
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+
+    padding:70px 9%;
+
+    background:
+    radial-gradient(circle at 80% 30%,#ffd4e0,transparent 35%),
+    linear-gradient(135deg,#fff7f9,#f8dbe4);
+}
+
+.hero-text{
+    max-width:570px;
+}
+
+.small-title{
+    color:#c72c59;
+    font-size:13px;
+    font-weight:bold;
+    letter-spacing:3px;
+}
+
+.hero h1{
+    font-family:Georgia,serif;
+    font-size:70px;
+    line-height:1.05;
+    margin:20px 0;
+}
+
+.hero h1 span{
+    color:#c72c59;
+}
+
+.hero-text p{
+    color:#666;
+    line-height:1.8;
+}
+
+.buttons{
+    margin-top:30px;
+    display:flex;
+    gap:15px;
+}
+
+.btn{
+    padding:14px 30px;
+    border:0;
+    border-radius:30px;
+    background:#c72c59;
+    color:white;
+    font-weight:bold;
+}
+
+.btn:hover{
+    background:#991e43;
+    transform:translateY(-2px);
+}
+
+.btn-outline{
+    padding:13px 30px;
+    border:1px solid #c72c59;
+    border-radius:30px;
+    color:#c72c59;
+    font-weight:bold;
+}
+
+/* HERO PRODUCT */
+
+.hero-product{
+    width:390px;
+    height:440px;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    position:relative;
+}
+
+.hero-circle{
+    position:absolute;
+
+    width:330px;
+    height:330px;
+
+    border-radius:50%;
+
+    background:linear-gradient(
+        135deg,
+        #ef9fb8,
+        #fff0f4
+    );
+
+    box-shadow:0 25px 60px rgba(180,40,80,.2);
+}
+
+.big-lipstick{
+    position:relative;
+    z-index:2;
+    transform:rotate(-10deg);
+
+    filter:drop-shadow(15px 20px 15px rgba(0,0,0,.25));
+}
+
+.big-lip{
+    width:90px;
+    height:130px;
+
+    margin-left:18px;
+
+    border-radius:45px 45px 10px 10px;
+
+    background:linear-gradient(
+        135deg,
+        #8d1239,
+        #e9406b
+    );
+}
+
+.big-body{
+    width:125px;
+    height:150px;
+
+    background:linear-gradient(
+        90deg,
+        #aa7b51,
+        #f2d2a4,
+        #a9794f
+    );
+}
+
+.big-base{
+    width:125px;
+    height:38px;
+
+    background:#242124;
+    border-radius:4px 4px 12px 12px;
+}
+
+/* FEATURES */
+
+.features{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:20px;
+
+    padding:45px 8%;
+    background:white;
+}
+
+.feature{
+    text-align:center;
+}
+
+.feature-icon{
+    font-size:32px;
+}
+
+.feature h3{
+    margin:10px 0;
+}
+
+.feature p{
+    color:#777;
+    font-size:13px;
+}
+
+/* SECTION */
+
+.section{
+    padding:90px 8%;
+}
+
+.heading{
+    text-align:center;
+    margin-bottom:45px;
+}
+
+.heading h2{
+    font-family:Georgia,serif;
+    font-size:43px;
+    margin:10px 0;
+}
+
+.heading p{
+    color:#777;
+}
+
+/* SEARCH */
+
+.search{
+    width:320px;
+    max-width:90%;
+
+    display:block;
+
+    margin:0 auto 40px;
+
+    padding:14px 20px;
+
+    border:1px solid #ddd;
+    border-radius:30px;
+
+    outline:none;
+}
+
+/* PRODUCTS */
+
+.products{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:25px;
+}
+
+.card{
+    background:white;
+    border-radius:20px;
+    overflow:hidden;
+
+    box-shadow:0 10px 35px rgba(0,0,0,.08);
+
+    transition:.3s;
+}
+
+.card:hover{
+    transform:translateY(-9px);
+    box-shadow:0 20px 45px rgba(0,0,0,.13);
+}
+
+/* PRODUCT VISUAL */
+
+.product-visual{
+    height:270px;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    position:relative;
+}
+
+.visual1{
+    background:linear-gradient(135deg,#f8ccd9,#fff0f4);
+}
+
+.visual2{
+    background:linear-gradient(135deg,#ead0ba,#fff1e3);
+}
+
+.visual3{
+    background:linear-gradient(135deg,#f5bfd2,#ffeaf1);
+}
+
+.visual4{
+    background:linear-gradient(135deg,#d7b2c1,#f5e0e7);
+}
+
+/* MINI LIPSTICK */
+
+.mini{
+    transform:rotate(-10deg);
+
+    filter:drop-shadow(9px 13px 8px rgba(0,0,0,.25));
+}
+
+.mini-colour{
+    width:60px;
+    height:90px;
+
+    margin-left:13px;
+
+    border-radius:30px 30px 5px 5px;
+}
+
+.red{
+    background:linear-gradient(135deg,#851033,#e83c66);
+}
+
+.nude{
+    background:linear-gradient(135deg,#9d6049,#d99a76);
+}
+
+.pink{
+    background:linear-gradient(135deg,#c72c63,#ff91b5);
+}
+
+.berry{
+    background:linear-gradient(135deg,#55102f,#a52659);
+}
+
+.mini-body{
+    width:86px;
+    height:100px;
+
+    background:linear-gradient(
+        90deg,
+        #aa7b51,
+        #f0c998,
+        #9b704a
+    );
+}
+
+.mini-base{
+    width:86px;
+    height:27px;
+
+    background:#222;
+    border-radius:3px 3px 9px 9px;
+}
+
+/* PRODUCT CONTENT */
+
+.card-content{
+    padding:22px;
+}
+
+.badge{
+    display:inline-block;
+
+    background:#fde5ec;
+    color:#c72c59;
+
+    padding:5px 10px;
+
+    border-radius:20px;
+
+    font-size:10px;
+    font-weight:bold;
+}
+
+.card h3{
+    font-family:Georgia,serif;
+    font-size:24px;
+    margin:10px 0 5px;
+}
+
+.description{
+    color:#777;
+    font-size:13px;
+}
+
+.rating{
+    color:#e3a300;
+    margin:12px 0;
+}
+
+.price-row{
+    display:flex;
+    align-items:center;
+    gap:10px;
+    margin-bottom:16px;
+}
+
+.price{
+    font-size:21px;
+    font-weight:bold;
+}
+
+.old-price{
+    color:#999;
+    text-decoration:line-through;
+    font-size:14px;
+}
+
+.add-cart{
+    width:100%;
+
+    padding:12px;
+
+    border:0;
+    border-radius:25px;
+
+    background:#292126;
+    color:white;
+
+    font-weight:bold;
+}
+
+.add-cart:hover{
+    background:#c72c59;
+}
+
+/* CAMPAIGN */
+
+.campaign{
+    margin:20px 8% 80px;
+
+    padding:70px 10%;
+
+    border-radius:25px;
+
+    text-align:center;
+
+    color:white;
+
+    background:
+    radial-gradient(circle at 20% 20%,#c84b72,transparent 30%),
+    linear-gradient(135deg,#2b2024,#78223f);
+}
+
+.campaign h2{
+    font-family:Georgia,serif;
+    font-size:52px;
+    margin:12px 0;
+}
+
+.campaign span{
+    color:#ffb4c8;
+}
+
+.campaign p{
+    color:#eee;
+    line-height:1.7;
+}
+
+.campaign button{
+    margin-top:25px;
+
+    padding:14px 32px;
+
+    border:0;
+    border-radius:30px;
+
+    background:white;
+    color:#a5224b;
+
+    font-weight:bold;
+}
+
+/* ABOUT */
+
+.about{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:70px;
+    align-items:center;
+}
+
+.about-visual{
+    min-height:400px;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    border-radius:25px;
+
+    background:
+    radial-gradient(circle,#efadc1,#fff0f4);
+}
+
+.about-visual span{
+    font-size:130px;
+}
+
+.about-text h2{
+    font-family:Georgia,serif;
+    font-size:45px;
+    margin:15px 0;
+}
+
+.about-text p{
+    color:#666;
+    line-height:1.8;
+    margin-bottom:15px;
+}
+
+/* REVIEWS */
+
+.reviews{
+    background:white;
+}
+
+.review-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:25px;
+}
+
+.review{
+    padding:30px;
+
+    background:#fff8fa;
+
+    border:1px solid #f3dbe2;
+
+    border-radius:18px;
+}
+
+.review-stars{
+    color:#e3a300;
+}
+
+.review p{
+    color:#666;
+    line-height:1.7;
+    margin:15px 0;
+}
+
+/* DIGITAL MARKETING */
+
+.marketing{
+    background:#fce7ed;
+}
+
+.marketing-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:25px;
+}
+
+.marketing-box{
+    background:white;
+    padding:30px;
+    border-radius:18px;
+}
+
+.marketing-box .icon{
+    font-size:40px;
+}
+
+.marketing-box h3{
+    margin:15px 0 10px;
+}
+
+.marketing-box p{
+    color:#666;
+    line-height:1.7;
+    font-size:14px;
+}
+
+/* NEWSLETTER */
+
+.newsletter{
+    text-align:center;
+    padding:80px 20px;
+}
+
+.newsletter h2{
+    font-family:Georgia,serif;
+    font-size:40px;
+    margin:10px;
+}
+
+.newsletter p{
+    color:#777;
+    margin-bottom:25px;
+}
+
+.newsletter input{
+    width:300px;
+    max-width:85%;
+
+    padding:14px 20px;
+
+    border:1px solid #ddd;
+    border-radius:30px;
+
+    outline:none;
+}
+
+/* FOOTER */
+
+footer{
+    background:#292126;
+    color:white;
+
+    padding:40px;
+
+    text-align:center;
+}
+
+footer p{
+    color:#aaa;
+    font-size:13px;
+    margin-top:8px;
+}
+
+/* RESPONSIVE */
+
+@media(max-width:950px){
+
+    .nav-links{
+        display:none;
+    }
+
+    .hero{
+        flex-direction:column;
+        text-align:center;
+    }
+
+    .hero h1{
+        font-size:52px;
+    }
+
+    .buttons{
+        justify-content:center;
+    }
+
+    .features,
+    .products{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+    .about{
+        grid-template-columns:1fr;
+    }
+
+    .review-grid,
+    .marketing-grid{
+        grid-template-columns:1fr;
+    }
+}
+
+@media(max-width:600px){
+
+    .features,
+    .products{
+        grid-template-columns:1fr;
+    }
+
+    .hero{
+        padding:50px 20px;
+    }
+
+    .hero h1{
+        font-size:44px;
+    }
+
+    .hero-product{
+        transform:scale(.8);
+    }
+
+    .heading h2{
+        font-size:34px;
+    }
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+
+<nav>
+
+    <div class="logo">
+        LUXE<span>LIPS</span>
+    </div>
+
+    <ul class="nav-links">
+
+        <li><a href="#home">Home</a></li>
+        <li><a href="#products">Shop</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#reviews">Reviews</a></li>
+        <li><a href="#contact">Contact</a></li>
+
+    </ul>
+
+    <div class="cart">
+        🛍️ <span id="cartCount">0</span>
+    </div>
+
+</nav>
+
+
+<!-- OFFER -->
+
+<div class="offer">
+    💄 SPECIAL OFFER — 20% OFF ON YOUR FIRST ORDER
+</div>
+
+
+<!-- HERO -->
+
+<section class="hero" id="home">
+
+    <div class="hero-text">
+
+        <div class="small-title">
+            PREMIUM BEAUTY COLLECTION
+        </div>
+
+        <h1>
+            Your Lips.<br>
+            Your <span>Statement.</span>
+        </h1>
+
+        <p>
+            Discover premium lipstick shades created
+            for everyday beauty, confidence and special moments.
+        </p>
+
+        <div class="buttons">
+
+            <a href="#products" class="btn">
+                SHOP NOW
+            </a>
+
+            <a href="#about" class="btn-outline">
+                EXPLORE
+            </a>
+
+        </div>
+
+    </div>
+
+
+    <div class="hero-product">
+
+        <div class="hero-circle"></div>
+
+        <div class="big-lipstick">
+
+            <div class="big-lip"></div>
+
+            <div class="big-body"></div>
+
+            <div class="big-base"></div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- FEATURES -->
+
+<section class="features">
+
+    <div class="feature">
+
+        <div class="feature-icon">💋</div>
+
+        <h3>Rich Pigment</h3>
+
+        <p>Beautiful colour in every swipe.</p>
+
+    </div>
+
+
+    <div class="feature">
+
+        <div class="feature-icon">✨</div>
+
+        <h3>Long Lasting</h3>
+
+        <p>Designed for all-day confidence.</p>
+
+    </div>
+
+
+    <div class="feature">
+
+        <div class="feature-icon">🌸</div>
+
+        <h3>Comfortable</h3>
+
+        <p>Lightweight and smooth feel.</p>
+
+    </div>
+
+
+    <div class="feature">
+
+        <div class="feature-icon">💖</div>
+
+        <h3>Trending Shades</h3>
+
+        <p>Colours for every mood.</p>
+
+    </div>
+
+</section>
+
+
+<!-- PRODUCTS -->
+
+<section class="section" id="products">
+
+    <div class="heading">
+
+        <div class="small-title">
+            SHOP OUR COLLECTION
+        </div>
+
+        <h2>
+            Find Your Perfect Shade
+        </h2>
+
+        <p>
+            Choose your favourite colour and add it to your cart.
+        </p>
+
+    </div>
+
+
+    <input
+        class="search"
+        id="search"
+        type="text"
+        placeholder="🔍 Search lipstick shade..."
+    >
+
+
+    <div class="products" id="productList">
+
+
+        <!-- RUBY RED -->
+
+        <div class="card">
+
+            <div class="product-visual visual1">
+
+                <div class="mini">
+
+                    <div class="mini-colour red"></div>
+                    <div class="mini-body"></div>
+                    <div class="mini-base"></div>
+
+                </div>
+
+            </div>
+
+            <div class="card-content">
+
+                <span class="badge">BESTSELLER</span>
+
+                <h3>Ruby Red</h3>
+
+                <p class="description">
+                    Bold classic red lipstick.
+                </p>
+
+                <div class="rating">
+                    ★★★★★
+                </div>
+
+                <div class="price-row">
+
+                    <span class="price">₹499</span>
+
+                    <span class="old-price">₹699</span>
+
+                </div>
+
+                <button
+                    class="add-cart"
+                    onclick="addToCart('Ruby Red',499)"
+                >
+                    ADD TO CART
+                </button>
+
+            </div>
+
+        </div>
+
+
+        <!-- NUDE GLOW -->
+
+        <div class="card">
+
+            <div class="product-visual visual2">
+
+                <div class="mini">
+
+                    <div class="mini-colour nude"></div>
+                    <div class="mini-body"></div>
+                    <div class="mini-base"></div>
+
+                </div>
+
+            </div>
+
+            <div class="card-content">
+
+                <span class="badge">EVERYDAY</span>
+
+                <h3>Nude Glow</h3>
+
+                <p class="description">
+                    Soft nude shade for daily wear.
+                </p>
+
+                <div class="rating">
+                    ★★★★★
+                </div>
+
+                <div class="price-row">
+
+                    <span class="price">₹449</span>
+
+                    <span class="old-price">₹599</span>
+
+                </div>
+
+                <button
+                    class="add-cart"
+                    onclick="addToCart('Nude Glow',449)"
+                >
+                    ADD TO CART
+                </button>
+
+            </div>
+
+        </div>
+
+
+        <!-- ROSE PINK -->
+
+        <div class="card">
+
+            <div class="product-visual visual3">
+
+                <div class="mini">
+
+                    <div class="mini-colour pink"></div>
+                    <div class="mini-body"></div>
+                    <div class="mini-base"></div>
+
+                </div>
+
+            </div>
+
+            <div class="card-content">
+
+                <span class="badge">NEW</span>
+
+                <h3>Rose Pink</h3>
+
+                <p class="description">
+                    Soft pink for a fresh look.
+                </p>
+
+                <div class="rating">
+                    ★★★★★
+                </div>
+
+                <div class="price-row">
+
+                    <span class="price">₹399</span>
+
+                    <span class="old-price">₹549</span>
+
+                </div>
+
+                <button
+                    class="add-cart"
+                    onclick="addToCart('Rose Pink',399)"
+                >
+                    ADD TO CART
+                </button>
+
+            </div>
+
+        </div>
+
+
+        <!-- BERRY WINE -->
+
+        <div class="card">
+
+            <div class="product-visual visual4">
+
+                <div class="mini">
+
+                    <div class="mini-colour berry"></div>
+                    <div class="mini-body"></div>
+                    <div class="mini-base"></div>
+
+                </div>
+
+            </div>
+
+            <div class="card-content">
+
+                <span class="badge">TRENDING</span>
+
+                <h3>Berry Wine</h3>
+
+                <p class="description">
+                    Deep berry shade for occasions.
+                </p>
+
+                <div class="rating">
+                    ★★★★★
+                </div>
+
+                <div class="price-row">
+
+                    <span class="price">₹549</span>
+
+                    <span class="old-price">₹749</span>
+
+                </div>
+
+                <button
+                    class="add-cart"
+                    onclick="addToCart('Berry Wine',549)"
+                >
+                    ADD TO CART
+                </button>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- OFFER CAMPAIGN -->
+
+<section class="campaign">
+
+    <div class="small-title" style="color:#ffb6c9;">
+        LIMITED TIME DIGITAL CAMPAIGN
+    </div>
+
+    <h2>
+        LOVE YOUR LIPS
+        <br>
+        <span>20% OFF</span>
+    </h2>
+
+    <p>
+        Shop your favourite lipstick shades today
+        and enjoy our special first-order offer.
+    </p>
+
+    <button onclick="claimOffer()">
+        CLAIM OFFER
+    </button>
+
+</section>
+
+
+<!-- ABOUT -->
+
+<section class="section" id="about">
+
+    <div class="about">
+
+        <div class="about-visual">
+
+            <span>💄💋</span>
+
+        </div>
+
+
+        <div class="about-text">
+
+            <div class="small-title">
+                ABOUT LUXE LIPS
+            </div>
+
+            <h2>
+                Beauty That Speaks For You
+            </h2>
+
+            <p>
+                LUXE LIPS is a modern lipstick brand
+                focused on stylish shades and beautiful
+                digital shopping experiences.
+            </p>
+
+            <p>
+                From everyday nude shades to bold
+                statement colours, there is a shade
+                for every occasion.
+            </p>
+
+            <button class="btn" onclick="learnMore()">
+                LEARN MORE
+            </button>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- REVIEWS -->
+
+<section class="section reviews" id="reviews">
+
+    <div class="heading">
+
+        <div class="small-title">
+            CUSTOMER REVIEWS
+        </div>
+
+        <h2>
+            What Customers Say
+        </h2>
+
+    </div>
+
+
+    <div class="review-grid">
+
+        <div class="review">
+
+            <div class="review-stars">
+                ★★★★★
+            </div>
+
+            <p>
+                "Ruby Red is my favourite shade.
+                The colour looks beautiful!"
+            </p>
+
+            <strong>— Ananya</strong>
+
+        </div>
+
+
+        <div class="review">
+
+            <div class="review-stars">
+                ★★★★★
+            </div>
+
+            <p>
+                "Nude Glow is perfect for my
+                everyday college look."
+            </p>
+
+            <strong>— Riya</strong>
+
+        </div>
+
+
+        <div class="review">
+
+            <div class="review-stars">
+                ★★★★★
+            </div>
+
+            <p>
+                "I loved the shade collection
+                and the premium design."
+            </p>
+
+            <strong>— Sneha</strong>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- DIGITAL MARKETING -->
+
+<section class="section marketing">
+
+    <div class="heading">
+
+        <div class="small-title">
+            DIGITAL MARKETING
+        </div>
+
+        <h2>
+            Our Marketing Strategy
+        </h2>
+
+        <p>
+            How LUXE LIPS reaches customers online.
+        </p>
+
+    </div>
+
+
+    <div class="marketing-grid">
+
+        <div class="marketing-box">
+
+            <div class="icon">📱</div>
+
+            <h3>Social Media Marketing</h3>
+
+            <p>
+                Instagram posts, reels and beauty
+                content help promote new lipstick shades.
+            </p>
+
+        </div>
+
+
+        <div class="marketing-box">
+
+            <div class="icon">🎯</div>
+
+            <h3>Online Advertising</h3>
+
+            <p>
+                Targeted advertisements help reach
+                customers interested in beauty products.
+            </p>
+
+        </div>
+
+
+        <div class="marketing-box">
+
+            <div class="icon">📧</div>
+
+            <h3>Email Marketing</h3>
+
+            <p>
+                Customers receive new product updates,
+                offers and promotional messages.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- NEWSLETTER -->
+
+<section class="newsletter" id="contact">
+
+    <div class="small-title">
+        JOIN LUXE LIPS
+    </div>
+
+    <h2>
+        Get Beauty Updates
+    </h2>
+
+    <p>
+        Subscribe for new shades, offers and updates.
+    </p>
+
+    <input
+        type="email"
+        id="email"
+        placeholder="Enter your email"
+    >
+
+    <button
+        class="btn"
+        onclick="subscribe()"
+    >
+        SUBSCRIBE
+    </button>
+
+</section>
+
+
+<!-- FOOTER -->
+
+<footer>
+
+    <div class="logo">
+        LUXE<span>LIPS</span>
+    </div>
+
+    <p>
+        Premium Lipsticks • Beauty • Confidence
+    </p>
+
+    <p>
+        © 2026 LUXE LIPS | Digital Marketing Project
+    </p>
+
+</footer>
+
+
+<script>
+
+/* CART */
+
+let cartCount = 0;
+
+function addToCart(product, price){
+
+    cartCount++;
+
+    document.getElementById("cartCount").innerText = cartCount;
+
+    alert(
+        "💄 " + product +
+        " added to cart!\n\n" +
+        "Price: ₹" + price +
+        "\nItems in cart: " + cartCount
+    );
+}
+
+
+/* OFFER */
+
+function claimOffer(){
+
+    alert(
+        "🎉 20% OFF OFFER ACTIVATED!\n\n" +
+        "Thank you for shopping with LUXE LIPS."
+    );
+
+}
+
+
+/* ABOUT */
+
+function learnMore(){
+
+    alert(
+        "LUXE LIPS offers stylish lipstick shades " +
+        "for everyday and special occasions. 💋"
+    );
+
+}
+
+
+/* SUBSCRIBE */
+
+function subscribe(){
+
+    let email =
+        document.getElementById("email").value;
+
+    if(email === ""){
+
+        alert("Please enter your email address.");
+
+        return;
+    }
+
+    alert(
+        "💖 Successfully subscribed!\n\n" +
+        "Updates will be sent to " + email
+    );
+
+}
+
+
+/* PRODUCT SEARCH */
+
+document
+.getElementById("search")
+.addEventListener("keyup", function(){
+
+    let searchText =
+        this.value.toLowerCase();
+
+    let cards =
+        document.querySelectorAll(".card");
+
+    cards.forEach(function(card){
+
+        let name =
+            card
+            .querySelector("h3")
+            .innerText
+            .toLowerCase();
+
+        if(name.includes(searchText)){
+
+            card.style.display = "block";
+
+        }else{
+
+            card.style.display = "none";
+
+        }
+
+    });
+
+});
+
+</script>
+
+</body>
+</html>
